@@ -9,59 +9,57 @@ import {
   Smartphone,
   Braces,
   Send,
-} from 'lucide-react'
-import { motion } from 'framer-motion'
-import './Experience.css'
+} from "lucide-react";
+import { motion } from "framer-motion";
+import "./Experience.css";
 
 function Experience() {
   const technologies = [
     {
-      name: 'REACT',
+      name: "REACT",
       icon: Code2,
-      className: 'tech-react',
+      className: "tech-react",
     },
     {
-      name: 'JAVASCRIPT',
+      name: "JAVASCRIPT",
       icon: Braces,
-      className: 'tech-javascript',
+      className: "tech-javascript",
     },
     {
-      name: 'NODE.JS',
+      name: "NODE.JS",
       icon: Server,
-      className: 'tech-node',
+      className: "tech-node",
     },
     {
-      name: 'EXPRESS.JS',
+      name: "EXPRESS.JS",
       icon: Layers3,
-      className: 'tech-express',
+      className: "tech-express",
     },
     {
-      name: 'MONGODB',
+      name: "MONGODB",
       icon: Database,
-      className: 'tech-mongodb',
+      className: "tech-mongodb",
     },
     {
-      name: 'REACT NATIVE',
+      name: "REACT NATIVE",
       icon: Smartphone,
-      className: 'tech-react-native',
+      className: "tech-react-native",
     },
     {
-      name: 'EXPO',
+      name: "EXPO",
       icon: Globe2,
-      className: 'tech-expo',
+      className: "tech-expo",
     },
     {
-      name: 'REST API',
+      name: "REST API",
       icon: Send,
-      className: 'tech-rest',
+      className: "tech-rest",
     },
-  ]
+  ];
 
   return (
     <section className="experience-section">
-
       <div className="container experience-container">
-
         {/* =========================================
             SECTION LABEL — SCROLL TARGET
         ========================================= */}
@@ -75,20 +73,16 @@ function Experience() {
           >
             <div className="experience-line experience-line-left" />
 
-            <div className="experience-label">
-              EXPERIENCE
-            </div>
+            <div className="experience-label">EXPERIENCE</div>
 
             <div className="experience-line experience-line-right" />
           </motion.div>
         </div>
 
-
         {/* =========================================
             MAIN CONTENT
         ========================================= */}
         <div className="experience-content">
-
           {/* =========================================
               HEADER
           ========================================= */}
@@ -99,7 +93,7 @@ function Experience() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{
               duration: 0.75,
-              ease: 'easeOut',
+              ease: "easeOut",
             }}
           >
             <div className="experience-heading">
@@ -109,7 +103,6 @@ function Experience() {
               </h2>
             </div>
           </motion.div>
-
 
           {/* =========================================
               CINEMATIC EXPERIENCE VISUAL
@@ -133,15 +126,14 @@ function Experience() {
             transition={{
               duration: 0.85,
               delay: 0.06,
-              ease: 'easeOut',
+              ease: "easeOut",
             }}
           >
             <div className="experience-visual-glow" />
 
             <div className="experience-visual-frame">
-
               <img
-                src="/images/experience-igloo.jpg"
+                src={`${import.meta.env.BASE_URL}images/experience-igloo.jpg`}
                 alt="Igloo internship experience"
               />
 
@@ -153,13 +145,9 @@ function Experience() {
                 PROFESSIONAL EXPERIENCE
               </div>
 
-              <div className="experience-visual-year">
-                2026
-              </div>
-
+              <div className="experience-visual-year">2026</div>
             </div>
           </motion.div>
-
 
           {/* =========================================
               EXPERIENCE ENTRY
@@ -172,20 +160,15 @@ function Experience() {
             transition={{
               duration: 0.8,
               delay: 0.08,
-              ease: 'easeOut',
+              ease: "easeOut",
             }}
           >
-
             {/* =========================================
                 ROLE / COMPANY
             ========================================= */}
             <div className="experience-item-top">
-
               <div className="experience-role">
-
-                <h3>
-                  Software Development Intern
-                </h3>
+                <h3>Software Development Intern</h3>
 
                 <div className="experience-company-row">
                   <span className="experience-company-dot" />
@@ -198,34 +181,24 @@ function Experience() {
                 <span className="experience-department">
                   MIS · Software Development
                 </span>
-
               </div>
 
-
               <div className="experience-meta">
-
                 <span className="experience-status">
                   <i />
                   COMPLETED
                 </span>
 
-                <span className="experience-date">
-                  JUN 2026 — SEP 2026
-                </span>
-
+                <span className="experience-date">JUN 2026 — SEP 2026</span>
               </div>
-
             </div>
-
 
             {/* =========================================
                 EXPERIENCE BODY
             ========================================= */}
             <div className="experience-body">
-
               {/* CONTRIBUTION */}
               <div className="experience-summary">
-
                 <span className="experience-small-label">
                   <span className="experience-small-label-line" />
                   CONTRIBUTION
@@ -235,94 +208,73 @@ function Experience() {
                 <p>
                   Contributed to the
                   <strong className="experience-project-name">
-                    {' '}IGLOO Asset Management System
-                  </strong>, a
-                  full-stack web and mobile platform designed to manage
+                    {" "}
+                    IGLOO Asset Management System
+                  </strong>
+                  , a full-stack web and mobile platform designed to manage
                   assets, outlets, users and verification workflows.
                 </p>
 
-                <a
-                  href="#projects"
-                  className="experience-link"
-                >
+                <a href="#projects" className="experience-link">
                   View the project
-
                   <ArrowUpRight size={15} />
                 </a>
-
               </div>
-
 
               {/* ENGINEERING DETAILS */}
               <div className="experience-details">
-
                 <div className="experience-detail">
-
                   <span className="experience-detail-bullet">
                     <i />
                   </span>
 
                   <p>
-                    Developed full-stack features across React,
-                    Node.js, Express.js and MongoDB.
+                    Developed full-stack features across React, Node.js,
+                    Express.js and MongoDB.
                   </p>
-
                 </div>
 
-
                 <div className="experience-detail">
-
                   <span className="experience-detail-bullet">
                     <i />
                   </span>
 
                   <p>
-                    Built REST API workflows for assets, outlets,
-                    users, verification and approval processes.
+                    Built REST API workflows for assets, outlets, users,
+                    verification and approval processes.
                   </p>
-
                 </div>
 
-
                 <div className="experience-detail">
-
                   <span className="experience-detail-bullet">
                     <i />
                   </span>
 
                   <p>
-                    Extended the platform into a React Native mobile
-                    application for field-oriented operations.
+                    Extended the platform into a React Native mobile application
+                    for field-oriented operations.
                   </p>
-
                 </div>
 
-
                 <div className="experience-detail">
-
                   <span className="experience-detail-bullet">
                     <i />
                   </span>
 
                   <p>
-                    Worked with authentication, permissions, data
-                    validation and production deployment workflows.
+                    Worked with authentication, permissions, data validation and
+                    production deployment workflows.
                   </p>
-
                 </div>
-
               </div>
-
             </div>
-
 
             {/* =========================================
                 TECHNOLOGY STACK
             ========================================= */}
             <div className="experience-stack">
-
               {technologies.map((technology) => {
-                const Icon = technology.icon
+                const Icon = technology.icon;
 
                 return (
                   <div
@@ -337,15 +289,11 @@ function Experience() {
                       {technology.name}
                     </span>
                   </div>
-                )
+                );
               })}
-
             </div>
-
           </motion.article>
-
         </div>
-
 
         {/* =========================================
             EXPERIENCE → PROJECTS
@@ -365,11 +313,9 @@ function Experience() {
 
           <ArrowDown size={17} />
         </motion.a>
-
       </div>
-
     </section>
-  )
+  );
 }
 
-export default Experience
+export default Experience;

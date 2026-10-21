@@ -67,7 +67,7 @@ function Resume() {
             <div className="resume-portrait-frame">
 
               <img
-                src="/images/sakib-portrait.jpg"
+                src={`${import.meta.env.BASE_URL}images/sakib-portrait-01.jpg`}
                 alt="Md. Sakib Al-Hasan"
               />
 
@@ -195,7 +195,7 @@ function Resume() {
             <div className="resume-card-actions">
 
               <a
-                href="/documents/CV.pdf"
+                href={`${import.meta.env.BASE_URL}documents/CV.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resume-view-button"
@@ -210,7 +210,7 @@ function Resume() {
               </a>
 
               <a
-                href="/documents/CV.pdf"
+                href={`${import.meta.env.BASE_URL}documents/CV.pdf`}
                 download="Md-Sakib-Al-Hasan-CV.pdf"
                 className="resume-download-button"
               >

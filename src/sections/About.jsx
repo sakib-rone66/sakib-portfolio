@@ -51,7 +51,7 @@ function About() {
                 <div className="about-portrait-glow" />
 
                 <img
-                  src="/images/sakib-portrait-2.jpg"
+                  src={`${import.meta.env.BASE_URL}images/sakib-portrait-04.jpg`}
                   alt="Md. Sakib Al-Hasan"
                 />
 

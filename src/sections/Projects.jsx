@@ -128,7 +128,7 @@ function Projects() {
 
                   <div className="project-window-image">
                     <img
-                      src="/images/igloo-AMS.jpg"
+                      src={`${import.meta.env.BASE_URL}images/igloo-AMS.jpg`}
                       alt="IGLOO Asset Management System"
                     />
 

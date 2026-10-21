@@ -109,7 +109,7 @@ function Navbar() {
         <div className="navbar-actions">
 
           <a
-            href="/documents/CV.pdf"
+            href={`${import.meta.env.BASE_URL}documents/CV.pdf`}
             className="navbar-cv"
             download="Md-Sakib-Al-Hasan-CV.pdf"
           >
