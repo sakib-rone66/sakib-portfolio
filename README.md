@@ -4,7 +4,7 @@
 
 ### Software Developer · Full-Stack Developer · Backend Developer
 
-**Build • Solve • Learn • Improve**
+***Build • Solve • Learn • Improve***
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-sakib--rone66.github.io-0D1117?style=for-the-badge&logo=googlechrome&logoColor=4285F4)](https://sakib-rone66.github.io/sakib-portfolio/)
 
