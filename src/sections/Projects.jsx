@@ -16,11 +16,11 @@ import { motion, useReducedMotion } from 'framer-motion'
 import './Projects.css'
 
 const revealVariants = {
-  hidden: { opacity: 0, filter: 'blur(8px)' },
+  hidden: { opacity: 0, y: 14 },
   visible: {
     opacity: 1,
-    filter: 'blur(0px)',
-    transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] },
+    y: 0,
+    transition: { duration: 0.62, ease: [0.22, 1, 0.36, 1] },
   },
 }
 
@@ -28,8 +28,8 @@ const projectGridVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.14,
-      delayChildren: 0.08,
+      staggerChildren: 0.1,
+      delayChildren: 0.04,
     },
   },
 }
@@ -45,22 +45,23 @@ function Projects() {
             PART 1 — PROJECTS INTRODUCTION
         ========================================================== */}
 
-        <motion.div
-          id="projects"
-          className="projects-top-label"
-          variants={revealVariants}
-          initial={shouldReduceMotion ? false : 'hidden'}
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
-          <div className="projects-line projects-line-left" />
+        <div id="projects" className="section-anchor">
+          <motion.div
+            className="projects-top-label"
+            variants={revealVariants}
+            initial={shouldReduceMotion ? false : 'hidden'}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <div className="projects-line projects-line-left" />
 
-          <div className="projects-label">
-            PROJECTS
-          </div>
+            <div className="projects-label">
+              PROJECTS
+            </div>
 
-          <div className="projects-line projects-line-right" />
-        </motion.div>
+            <div className="projects-line projects-line-right" />
+          </motion.div>
+        </div>
 
         <motion.div
           className="projects-header"
@@ -442,8 +443,9 @@ function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.6,
-            delay: 0.4,
+            duration: 0.48,
+            delay: 0.2,
+            ease: [0.22, 1, 0.36, 1],
           }}
         >
           <span>SCROLL TO SKILLS</span>

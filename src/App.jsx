@@ -13,6 +13,14 @@ import Contact from './sections/Contact.jsx'
 
 function App() {
   useEffect(() => {
+    if (
+      window.matchMedia(
+        '(max-width: 850px), (pointer: coarse) and (hover: none)',
+      ).matches
+    ) {
+      return
+    }
+
     let cancelled = false
     let alignmentTimer
 
@@ -54,14 +62,21 @@ function App() {
     const onHashChange = () => {
       const hash = window.location.hash
       if (hash) {
-        alignAfterFontsLoad(hash, hash === '#about-details' ? 0 : 1200)
+        const immediateAlignmentHashes = new Set(['#projects', '#contact'])
+        const delay = immediateAlignmentHashes.has(hash) ? 0 : 1200
+        alignAfterFontsLoad(hash, delay)
       }
     }
     const onLoad = () => {
       const hash = window.location.hash
       if (!hash) return
 
-      const animatedLabels = new Set(['#experience', '#projects', '#skills'])
+      const animatedLabels = new Set([
+        '#experience',
+        '#projects',
+        '#skills',
+        '#contact',
+      ])
       alignAfterFontsLoad(hash, animatedLabels.has(hash) ? 0 : 1200)
     }
 

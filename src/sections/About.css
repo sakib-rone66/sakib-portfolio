@@ -1054,6 +1054,17 @@
 }
 
 
+@media (pointer: coarse) and (hover: none) and (min-width: 851px) {
+  .about-part-one {
+    min-height: auto;
+  }
+
+  .about-part-one .about-part-container {
+    min-height: auto;
+  }
+}
+
+
 /* =========================================
    REDUCED MOTION
 ========================================= */

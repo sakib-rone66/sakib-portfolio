@@ -28,39 +28,36 @@ import { motion, useReducedMotion } from 'framer-motion'
 import './Skills.css'
 
 const skillLabelVariants = {
-  hidden: { opacity: 0, y: 12, filter: 'blur(6px)' },
+  hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: 'blur(0px)',
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.58, ease: [0.22, 1, 0.36, 1] },
   },
 }
 
 const skillIntroVariants = {
-  hidden: { opacity: 0, y: 24, filter: 'blur(8px)' },
+  hidden: { opacity: 0, y: 18 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: 'blur(0px)',
     transition: {
-      duration: 0.9,
-      delay: 0.08,
-      ease: [0.16, 1, 0.3, 1],
+      duration: 0.65,
+      delay: 0.05,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 }
 
 const skillRowVariants = {
-  hidden: { opacity: 0, y: 22, scale: 0.985, filter: 'blur(8px)' },
+  hidden: { opacity: 0, y: 16, scale: 0.99 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    filter: 'blur(0px)',
     transition: {
-      duration: 0.8,
-      ease: [0.16, 1, 0.3, 1],
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 }
@@ -69,8 +66,8 @@ const skillListVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.16,
-      delayChildren: 0.1,
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
     },
   },
 }
@@ -301,9 +298,9 @@ function Skills() {
           whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.6,
-            delay: 0.55,
-            ease: [0.16, 1, 0.3, 1],
+            duration: 0.5,
+            delay: 0.25,
+            ease: [0.22, 1, 0.36, 1],
           }}
         >
           <span>SCROLL TO RESUME</span>

@@ -26,8 +26,8 @@ function Resume() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{
-              duration: 0.7,
-              ease: [0.16, 1, 0.3, 1],
+              duration: 0.58,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <div className="resume-top-line resume-top-line-left" />
@@ -57,9 +57,9 @@ function Resume() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{
-              duration: 0.9,
-              delay: 0.08,
-              ease: [0.16, 1, 0.3, 1],
+              duration: 0.65,
+              delay: 0.06,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <div className="resume-portrait-glow" />
@@ -89,9 +89,9 @@ function Resume() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{
-              duration: 0.85,
-              delay: 0.16,
-              ease: [0.16, 1, 0.3, 1],
+              duration: 0.65,
+              delay: 0.12,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <span className="resume-eyebrow">
@@ -135,9 +135,9 @@ function Resume() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{
-              duration: 0.9,
-              delay: 0.24,
-              ease: [0.16, 1, 0.3, 1],
+              duration: 0.65,
+              delay: 0.18,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
 
@@ -236,8 +236,9 @@ function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.6,
-            delay: 0.4,
+            duration: 0.48,
+            delay: 0.2,
+            ease: [0.22, 1, 0.36, 1],
           }}
         >
           <span>SCROLL TO CONTACT</span>

@@ -3,11 +3,11 @@ import { motion, useReducedMotion } from 'framer-motion'
 import './Contact.css'
 
 const revealVariants = {
-  hidden: { opacity: 0, filter: 'blur(8px)' },
+  hidden: { opacity: 0, y: 14 },
   visible: {
     opacity: 1,
-    filter: 'blur(0px)',
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    y: 0,
+    transition: { duration: 0.62, ease: [0.22, 1, 0.36, 1] },
   },
 }
 
@@ -15,8 +15,8 @@ const staggerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.14,
-      delayChildren: 0.06,
+      staggerChildren: 0.1,
+      delayChildren: 0.04,
     },
   },
 }
@@ -28,22 +28,23 @@ function Contact() {
     <section className="contact-section">
       <div className="container">
 
-        <motion.div
-          className="contact-top-label"
-          id="contact"
-          variants={revealVariants}
-          initial={shouldReduceMotion ? false : 'hidden'}
-          whileInView={shouldReduceMotion ? undefined : 'visible'}
-          viewport={{ once: true, amount: 0.8 }}
-        >
-          <div className="contact-top-line contact-top-line-left" />
+        <div id="contact" className="section-anchor">
+          <motion.div
+            className="contact-top-label"
+            variants={revealVariants}
+            initial={shouldReduceMotion ? false : 'hidden'}
+            whileInView={shouldReduceMotion ? undefined : 'visible'}
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <div className="contact-top-line contact-top-line-left" />
 
-          <div className="contact-label">
-            CONTACT
-          </div>
+            <div className="contact-label">
+              CONTACT
+            </div>
 
-          <div className="contact-top-line contact-top-line-right" />
-        </motion.div>
+            <div className="contact-top-line contact-top-line-right" />
+          </motion.div>
+        </div>
 
         <motion.div
           className="contact-layout"

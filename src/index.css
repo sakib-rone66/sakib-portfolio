@@ -584,7 +584,7 @@ button:focus-visible {
 
 @media (max-width: 600px) {
   html {
-    scroll-padding-top: 82px;
+    scroll-padding-top: 0;
   }
 
   .container {
@@ -622,6 +622,18 @@ button:focus-visible {
     height: 280px;
 
     bottom: -180px;
+  }
+}
+
+@media (max-width: 850px), (pointer: coarse) and (hover: none) {
+  .ambient-orb {
+    animation: none;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  html {
+    scroll-padding-top: 0;
   }
 }
 

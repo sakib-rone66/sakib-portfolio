@@ -2,6 +2,28 @@ import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import './About.css'
 
+const aboutPanelVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.04,
+    },
+  },
+}
+
+const aboutRevealVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.48,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+}
+
 function About() {
   return (
     <section className="about-section">
@@ -9,17 +31,20 @@ function About() {
       {/* =========================================
           ABOUT — PART 1
       ========================================= */}
-      <div className="about-part about-part-one">
+      <motion.div
+        className="about-part about-part-one"
+        variants={aboutPanelVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.12 }}
+      >
         <div className="container about-part-container">
 
           {/* ABOUT LABEL — SCROLL TARGET */}
           <div id="about" className="section-anchor">
             <motion.div
               className="about-top"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.65 }}
+              variants={aboutRevealVariants}
             >
               <div className="about-line about-line-left" />
 
@@ -38,13 +63,7 @@ function About() {
             {/* PORTRAIT */}
             <motion.div
               className="about-portrait"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{
-                duration: 0.8,
-                ease: 'easeOut',
-              }}
+              variants={aboutRevealVariants}
             >
               <div className="about-portrait-frame">
 
@@ -68,14 +87,7 @@ function About() {
             {/* ABOUT TEXT */}
             <motion.div
               className="about-content"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.08,
-                ease: 'easeOut',
-              }}
+              variants={aboutRevealVariants}
             >
 
               <div className="about-heading">
@@ -124,9 +136,7 @@ function About() {
           <motion.a
             href="#about-details"
             className="about-scroll about-more-scroll"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
+            variants={aboutRevealVariants}
           >
             <span>MORE ABOUT ME</span>
             <span className="projects-scroll-arrow">
@@ -135,14 +145,18 @@ function About() {
           </motion.a>
 
         </div>
-      </div>
+      </motion.div>
 
 
       {/* =========================================
           PROFILE — PART 2
       ========================================= */}
-      <div
+      <motion.div
         className="about-part about-part-two"
+        variants={aboutPanelVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.12 }}
       >
         <div className="container about-part-container">
 
@@ -150,10 +164,7 @@ function About() {
           <div id="about-details" className="section-anchor">
             <motion.div
               className="about-top"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.65 }}
+              variants={aboutRevealVariants}
             >
               <div className="about-line about-line-left" />
 
@@ -171,10 +182,7 @@ function About() {
 
             <motion.div
               className="about-details"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.7 }}
+              variants={aboutRevealVariants}
             >
 
               <div className="about-detail">
@@ -207,13 +215,7 @@ function About() {
             ===================================== */}
             <motion.div
               className="about-statement"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{
-                duration: 0.7,
-                delay: 0.1,
-              }}
+              variants={aboutRevealVariants}
             >
 
               <p>
@@ -239,13 +241,7 @@ function About() {
           <motion.a
             href="#experience"
             className="about-experience-scroll"
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.35,
-            }}
+            variants={aboutRevealVariants}
           >
             <span>SCROLL TO EXPERIENCE</span>
 
@@ -255,7 +251,7 @@ function About() {
           </motion.a>
 
         </div>
-      </div>
+      </motion.div>
 
     </section>
   )

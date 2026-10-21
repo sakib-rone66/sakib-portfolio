@@ -69,7 +69,7 @@ function Experience() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
+            transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="experience-line experience-line-left" />
 
@@ -92,8 +92,8 @@ function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{
-              duration: 0.75,
-              ease: "easeOut",
+              duration: 0.62,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <div className="experience-heading">
@@ -124,9 +124,9 @@ function Experience() {
               amount: 0.2,
             }}
             transition={{
-              duration: 0.85,
-              delay: 0.06,
-              ease: "easeOut",
+              duration: 0.68,
+              delay: 0.05,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <div className="experience-visual-glow" />
@@ -158,9 +158,9 @@ function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{
-              duration: 0.8,
-              delay: 0.08,
-              ease: "easeOut",
+              duration: 0.64,
+              delay: 0.06,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             {/* =========================================
@@ -305,8 +305,9 @@ function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.6,
-            delay: 0.4,
+            duration: 0.48,
+            delay: 0.2,
+            ease: [0.22, 1, 0.36, 1],
           }}
         >
           <span>SCROLL TO PROJECTS</span>

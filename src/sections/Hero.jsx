@@ -14,7 +14,7 @@ function Hero() {
             className="hero-eyebrow"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.52, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="hero-status-dot" />
             AVAILABLE FOR SOFTWARE DEVELOPMENT ROLES
@@ -24,7 +24,7 @@ function Hero() {
             className="hero-title"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.58, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
             Building digital
             <span className="hero-title-gradient">
@@ -37,7 +37,7 @@ function Hero() {
             className="hero-description"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.58, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
             I'm <strong>Md. Sakib Al-Hasan</strong>, a Software Developer
             focused on building modern web, backend and mobile
@@ -49,7 +49,7 @@ function Hero() {
             className="hero-actions"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.58, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
           >
             <a
               href="#projects"
@@ -71,7 +71,7 @@ function Hero() {
             className="hero-meta"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.52, delay: 0.26, ease: [0.22, 1, 0.36, 1] }}
           >
             <span>Software Developer</span>
             <i />
@@ -86,7 +86,7 @@ function Hero() {
           className="hero-visual"
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.25 }}
+          transition={{ duration: 0.72, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
         >
 
           <div className="hero-orbit hero-orbit-one" />
@@ -175,7 +175,7 @@ function Hero() {
         className="hero-scroll"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1 }}
+        transition={{ duration: 0.45, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <span>SCROLL TO EXPLORE</span>
         <ArrowDown size={15} />
