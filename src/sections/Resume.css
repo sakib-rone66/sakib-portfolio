@@ -1,0 +1,1339 @@
+/* =========================================
+   RESUME SECTION
+========================================= */
+
+.resume-section {
+  position: relative;
+
+  width: 100%;
+
+  height: auto;
+
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 96px 0 40px;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.resume-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   AMBIENT LIGHT
+========================================= */
+
+.resume-ambient {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(130px);
+}
+
+
+.resume-ambient-left {
+  width: 470px;
+  height: 470px;
+
+  top: -150px;
+  left: -340px;
+
+  background: rgba(76, 101, 255, 0.085);
+}
+
+
+.resume-ambient-right {
+  width: 500px;
+  height: 500px;
+
+  right: -360px;
+  bottom: -180px;
+
+  background: rgba(145, 88, 255, 0.075);
+}
+
+
+/* =========================================
+   SECTION LABEL
+   SAME ANCHOR POSITIONING AS ABOUT
+========================================= */
+
+.resume-top-label {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 20px;
+
+  width: 100%;
+
+  margin-bottom: 42px;
+
+  scroll-margin-top: 112px;
+}
+
+
+.resume-top-line {
+  height: 1px;
+}
+
+
+.resume-top-line-left {
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.09)
+    );
+}
+
+
+.resume-top-line-right {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.09),
+      transparent
+    );
+}
+
+
+.resume-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.56);
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.20em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+.resume-label span {
+  color: #7f9fff;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.resume-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(230px, 300px)
+    minmax(360px, 1.05fr)
+    minmax(320px, 0.85fr);
+
+  gap: clamp(34px, 4vw, 68px);
+
+  align-items: center;
+}
+
+
+/* =========================================
+   PORTRAIT
+========================================= */
+
+.resume-portrait {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.resume-portrait-glow {
+  position: absolute;
+
+  width: 90%;
+  height: 85%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101, 124, 255, 0.17),
+      rgba(101, 124, 255, 0.055) 40%,
+      transparent 72%
+    );
+
+  filter: blur(28px);
+
+  pointer-events: none;
+}
+
+
+.resume-portrait-frame {
+  position: relative;
+
+  width: 100%;
+  max-width: 300px;
+
+  aspect-ratio: 0.77;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.105);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.34),
+    0 0 60px rgba(80, 105, 255, 0.065),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  transform:
+    perspective(1100px)
+    rotateY(3deg);
+
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.resume-portrait-frame:hover {
+  transform:
+    perspective(1100px)
+    rotateY(0deg)
+    translateY(-5px);
+
+  border-color:
+    rgba(141, 169, 255, 0.25);
+
+  box-shadow:
+    0 45px 110px rgba(0, 0, 0, 0.40),
+    0 0 75px rgba(80, 105, 255, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+
+.resume-portrait-frame img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter:
+    saturate(0.90)
+    contrast(1.03);
+
+  transition:
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
+}
+
+
+.resume-portrait-frame:hover img {
+  transform: scale(1.025);
+
+  filter:
+    saturate(0.97)
+    contrast(1.04);
+}
+
+
+/* =========================================
+   PORTRAIT OVERLAY
+========================================= */
+
+.resume-portrait-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 6, 11, 0.02) 32%,
+      rgba(5, 6, 11, 0.12) 57%,
+      rgba(5, 6, 11, 0.91) 100%
+    );
+}
+
+
+.resume-portrait-shine {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 27%,
+      rgba(255, 255, 255, 0.055) 45%,
+      transparent 61%
+    );
+
+  transform: translateX(-125%);
+
+  transition:
+    transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.resume-portrait-frame:hover .resume-portrait-shine {
+  transform: translateX(125%);
+}
+
+
+/* =========================================
+   CAREER PROFILE
+========================================= */
+
+.resume-heading {
+  position: relative;
+
+  max-width: 600px;
+}
+
+
+.resume-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 19px;
+
+  color: #8da9ff;
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+}
+
+
+.resume-eyebrow::before {
+  width: 22px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #657cff,
+      #9468ff
+    );
+
+  content: '';
+}
+
+
+.resume-heading h2 {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(44px, 4.3vw, 64px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+
+.resume-heading h2 span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.30);
+}
+
+
+.resume-heading p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.44);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   PROFILE META
+========================================= */
+
+.resume-profile-meta {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  max-width: 500px;
+
+  margin-top: 28px;
+}
+
+
+.resume-profile-meta > div {
+  position: relative;
+
+  padding: 15px 16px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(161, 178, 255, 0.13);
+
+  border-radius: 12px;
+
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(101, 124, 255, 0.09),
+      transparent 62%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018) 70%
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 7px 18px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.resume-profile-meta > div:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(141, 169, 255, 0.32);
+
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(101, 124, 255, 0.14),
+      transparent 65%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(141, 169, 255, 0.09),
+      rgba(255, 255, 255, 0.025) 70%
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 11px 24px rgba(0, 0, 0, 0.22),
+    0 0 20px rgba(101, 124, 255, 0.08);
+}
+
+
+.resume-profile-meta span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: rgba(173, 188, 255, 0.74);
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.resume-profile-meta strong {
+  display: block;
+
+  color: rgba(248, 249, 255, 0.88);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================
+   RESUME CARD
+========================================= */
+
+.resume-card {
+  position: relative;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(101, 124, 255, 0.09),
+      transparent 36%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.016)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.resume-card::before {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -120px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(100, 130, 255, 0.12);
+
+  filter: blur(45px);
+
+  content: '';
+
+  pointer-events: none;
+}
+
+
+.resume-card::after {
+  position: absolute;
+
+  top: 0;
+  right: 18%;
+  left: 18%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(141, 169, 255, 0.34),
+      transparent
+    );
+
+  content: '';
+
+  pointer-events: none;
+}
+
+
+.resume-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(125, 160, 255, 0.22);
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.34),
+    0 0 45px rgba(80, 110, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.resume-card-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.resume-card-icon {
+  width: 49px;
+  height: 49px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(125, 160, 255, 0.18);
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(100, 130, 255, 0.10),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  color: #8da9ff;
+}
+
+
+.resume-card-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+}
+
+
+.resume-card-status i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #63e6a3;
+
+  box-shadow:
+    0 0 8px rgba(99, 230, 163, 0.75);
+
+  animation:
+    resumeStatusPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes resumeStatusPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.resume-card-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.resume-card-content > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+}
+
+
+.resume-card-content h3 {
+  margin: 0 0 9px;
+
+  color: #ffffff;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 26px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
+}
+
+
+.resume-card-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.40);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   DOCUMENT INFORMATION
+========================================= */
+
+.resume-document-info {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 0.65fr 1.35fr;
+
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+
+.resume-document-info > div {
+  padding: 11px 12px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.02);
+}
+
+
+.resume-document-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(173, 188, 255, 0.48);
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 6.5px;
+
+  letter-spacing: 0.10em;
+}
+
+
+.resume-document-info strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.70);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.resume-card-actions {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 25px;
+
+  padding-top: 21px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.resume-view-button,
+.resume-download-button {
+  position: relative;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 48px;
+  min-width: 116px;
+
+  padding: 0 18px;
+
+  border-radius: 12px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.resume-view-button::before,
+.resume-download-button::before {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 18%,
+      rgba(255, 255, 255, 0.11) 48%,
+      transparent 76%
+    );
+
+  opacity: 0;
+
+  transform: translateX(-45%);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.45s ease;
+
+  content: '';
+  pointer-events: none;
+}
+
+
+.resume-view-button:hover::before,
+.resume-download-button:hover::before {
+  opacity: 1;
+
+  transform: translateX(45%);
+}
+
+
+.resume-view-button svg,
+.resume-download-button svg {
+  position: relative;
+  z-index: 1;
+
+  flex: 0 0 auto;
+
+  transition: transform 0.25s ease;
+}
+
+
+.resume-action-label {
+  position: relative;
+  z-index: 1;
+}
+
+
+.resume-view-button:hover svg {
+  transform: translate(2px, -2px);
+}
+
+
+.resume-download-button:hover svg {
+  transform: translateY(2px);
+}
+
+
+.resume-view-button {
+  border:
+    1px solid rgba(151, 174, 255, 0.42);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110, 137, 255, 0.22),
+      rgba(100, 130, 255, 0.10) 58%,
+      rgba(148, 104, 255, 0.08)
+    );
+
+  color: #d5deff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 6px 16px rgba(49, 68, 150, 0.16);
+}
+
+
+.resume-view-button:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(125, 151, 255, 0.32),
+      rgba(100, 130, 255, 0.16) 58%,
+      rgba(148, 104, 255, 0.12)
+    );
+
+  border-color:
+    rgba(170, 188, 255, 0.62);
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 10px 24px rgba(80, 110, 255, 0.20);
+}
+
+
+.resume-download-button {
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  color: rgba(255, 255, 255, 0.76);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 5px 14px rgba(0, 0, 0, 0.14);
+}
+
+
+.resume-download-button:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.11),
+      rgba(255, 255, 255, 0.045)
+    );
+
+  border-color:
+    rgba(255, 255, 255, 0.24);
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+    0 9px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+.resume-view-button:focus-visible,
+.resume-download-button:focus-visible {
+  outline: 2px solid rgba(161, 178, 255, 0.82);
+
+  outline-offset: 3px;
+}
+
+
+.resume-view-button:active,
+.resume-download-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+
+/* =========================================
+   LARGE DESKTOP / SHORT SCREEN
+========================================= */
+
+@media (min-width: 1051px) and (max-height: 850px) {
+
+  .resume-top-label {
+    margin-bottom: 30px;
+  }
+
+  .resume-layout {
+    grid-template-columns:
+      minmax(230px, 250px)
+      minmax(360px, 1.05fr)
+      minmax(320px, 0.85fr);
+
+    gap: 42px;
+  }
+
+  .resume-portrait-frame {
+    max-width: 250px;
+  }
+
+  .resume-heading h2 {
+    font-size: 48px;
+    margin-bottom: 19px;
+  }
+
+  .resume-heading p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .resume-profile-meta {
+    margin-top: 20px;
+  }
+
+  .resume-card {
+    padding: 25px;
+  }
+
+  .resume-card-top {
+    margin-bottom: 20px;
+  }
+
+  .resume-document-info {
+    margin-top: 19px;
+  }
+
+  .resume-card-actions {
+    margin-top: 19px;
+    padding-top: 17px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .resume-section {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  .resume-section {
+    height: auto;
+    min-height: auto;
+
+    padding: 90px 0 40px;
+  }
+
+  .resume-layout {
+    grid-template-columns:
+      minmax(230px, 0.75fr)
+      minmax(0, 1.25fr);
+
+    gap: 50px;
+  }
+
+  .resume-portrait-frame {
+    max-width: 270px;
+  }
+
+  .resume-card {
+    grid-column: 1 / -1;
+
+    width: min(100%, 650px);
+
+    margin-inline: auto;
+  }
+}
+
+
+/* =========================================
+   TABLET SMALL
+========================================= */
+
+@media (max-width: 800px) {
+
+  .resume-section {
+    padding: clamp(64px, 10svh, 90px) 0 40px;
+  }
+
+  .resume-top-label {
+    margin-bottom: 38px;
+  }
+
+  .resume-layout {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .resume-portrait {
+    justify-content: flex-start;
+  }
+
+  .resume-portrait-frame {
+    max-width: 290px;
+  }
+
+  .resume-heading {
+    max-width: 700px;
+  }
+
+  .resume-card {
+    grid-column: auto;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin-inline: 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .resume-section {
+    padding: clamp(64px, 10svh, 84px) 0 40px;
+  }
+
+  .resume-top-label {
+    gap: 13px;
+
+    margin-bottom: 38px;
+
+    scroll-margin-top: 96px;
+  }
+
+  .resume-label {
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+  }
+
+  .resume-layout {
+    gap: 42px;
+  }
+
+  .resume-portrait {
+    justify-content: center;
+  }
+
+  .resume-portrait-frame {
+    max-width: 265px;
+
+    border-radius: 20px;
+  }
+
+  .resume-heading h2 {
+    font-size: 44px;
+  }
+
+  .resume-heading p {
+    font-size: 13px;
+  }
+
+  .resume-profile-meta {
+    grid-template-columns: 1fr;
+
+    margin-top: 25px;
+  }
+
+  .resume-card {
+    padding: 25px;
+
+    border-radius: 17px;
+  }
+
+  .resume-card-content h3 {
+    font-size: 24px;
+  }
+
+  .resume-card-actions {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .resume-view-button,
+  .resume-download-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .resume-section {
+    padding-top: clamp(64px, 10svh, 84px);
+  }
+
+  .resume-heading h2 {
+    font-size: 39px;
+  }
+
+  .resume-heading p {
+    font-size: 12.5px;
+  }
+
+  .resume-portrait-frame {
+    max-width: 240px;
+  }
+
+  .resume-card {
+    padding: 22px;
+  }
+
+  .resume-card-content h3 {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .resume-portrait-frame,
+  .resume-portrait-frame img,
+  .resume-portrait-shine,
+  .resume-card,
+  .resume-profile-meta > div,
+  .resume-view-button,
+  .resume-download-button,
+  .resume-view-button::before,
+  .resume-download-button::before {
+    transition: none;
+  }
+
+  .resume-card-status i {
+    animation: none;
+  }
+}

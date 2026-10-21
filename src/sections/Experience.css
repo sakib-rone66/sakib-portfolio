@@ -1,0 +1,1573 @@
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+  position: relative;
+
+  min-height: 0;
+
+  padding: 96px 0 40px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.045);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   EXPERIENCE SCROLL TARGET
+   Keeps EXPERIENCE label below fixed navbar
+========================================================= */
+
+#experience {
+  scroll-margin-top: 112px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.experience-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.experience-top-label {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 20px;
+
+  width: 100%;
+
+  margin-bottom: 38px;
+}
+
+.experience-line {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.09)
+    );
+}
+
+.experience-line-right {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.09),
+      transparent
+    );
+}
+
+.experience-label {
+  color: rgba(255, 255, 255, 0.56);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.experience-content {
+  position: relative;
+
+  width: 100%;
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.experience-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 34px;
+}
+
+.experience-heading {
+  max-width: 720px;
+}
+
+.experience-heading h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.experience-heading h2 span {
+  display: block;
+
+  color: transparent;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #dce2ff 40%,
+      #a8b5ff 72%,
+      #bd9eff 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   CINEMATIC VISUAL
+   EXACT IMAGE RATIO: 1536 × 572
+========================================================= */
+
+.experience-visual {
+  position: relative;
+
+  width: 100%;
+
+  margin-bottom: 42px;
+}
+
+.experience-visual-glow {
+  position: absolute;
+
+  inset: 8% 8% -10%;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(82, 104, 255, 0.16),
+      rgba(151, 91, 255, 0.12)
+    );
+
+  filter: blur(60px);
+
+  opacity: 0.65;
+
+  pointer-events: none;
+}
+
+
+/*
+   IMPORTANT:
+   The source image is exactly 1536 × 572.
+
+   Using the same aspect ratio here means:
+   - no vertical stretching
+   - no horizontal stretching
+   - no unwanted cropping
+   - image visualization matches the source image
+*/
+
+.experience-visual-frame {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1536 / 572;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.085);
+
+  border-radius: 28px;
+
+  background: #09090d;
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  isolation: isolate;
+}
+
+.experience-visual-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  /*
+    The container has the exact same ratio as the image,
+    so cover will not crop the image.
+  */
+  object-fit: cover;
+
+  object-position: center center;
+
+  transform: scale(1.015);
+
+  filter:
+    saturate(0.78)
+    contrast(1.04)
+    brightness(0.72);
+
+  transition:
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s ease;
+}
+
+.experience-visual:hover .experience-visual-frame img {
+  transform: scale(1.035);
+
+  filter:
+    saturate(0.84)
+    contrast(1.05)
+    brightness(0.76);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.experience-visual-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 7, 0.02) 0%,
+      rgba(5, 5, 7, 0.04) 42%,
+      rgba(5, 5, 7, 0.64) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 7, 0.12),
+      transparent 55%,
+      rgba(5, 5, 7, 0.08)
+    );
+
+  pointer-events: none;
+}
+
+.experience-visual-shine {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.055) 46%,
+      transparent 58%
+    );
+
+  opacity: 0.42;
+
+  transform: translateX(-100%);
+
+  transition:
+    transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+
+  pointer-events: none;
+}
+
+.experience-visual:hover .experience-visual-shine {
+  transform: translateX(100%);
+}
+
+
+/* =========================================================
+   IMAGE BADGES
+========================================================= */
+
+.experience-visual-index,
+.experience-visual-year {
+  position: absolute;
+
+  bottom: 18px;
+
+  z-index: 4;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 26px;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 7px;
+
+  background:
+    rgba(7, 8, 13, 0.54);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 25px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  font-family: var(--font-mono);
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.experience-visual-index {
+  left: 20px;
+
+  color: rgba(226, 231, 255, 0.68);
+}
+
+.experience-visual-year {
+  right: 20px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   EXPERIENCE ITEM
+========================================================= */
+
+.experience-item {
+  position: relative;
+
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+
+/* =========================================================
+   ROLE / COMPANY HEADER
+========================================================= */
+
+.experience-item-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 34px 0 30px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.experience-role {
+  min-width: 0;
+}
+
+.experience-role h3 {
+  margin: 0 0 14px;
+
+  color: #ffffff;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(25px, 2.5vw, 30px);
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   COMPANY
+========================================================= */
+
+.experience-company-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 8px;
+}
+
+.experience-company-dot {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #8da9ff;
+
+  box-shadow:
+    0 0 9px rgba(141, 169, 255, 0.55);
+}
+
+.experience-company {
+  color: #8da9ff;
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.experience-department {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.experience-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 11px;
+
+  flex: 0 0 auto;
+}
+
+.experience-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: rgba(184, 198, 255, 0.70);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.experience-status i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #8fa7ff;
+
+  box-shadow:
+    0 0 9px rgba(143, 167, 255, 0.65);
+}
+
+.experience-date {
+  color: rgba(255, 255, 255, 0.35);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EXPERIENCE BODY
+========================================================= */
+
+.experience-body {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.82fr)
+    minmax(0, 1.18fr);
+
+  gap: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   CONTRIBUTION
+========================================================= */
+
+.experience-summary {
+  padding: 30px 42px 30px 0;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.experience-small-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  width: fit-content;
+
+  margin-bottom: 16px;
+
+  color: rgba(190, 203, 255, 0.68);
+
+  font-family: 'DM Mono', monospace;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.experience-small-label-line {
+  display: block;
+
+  width: 22px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(141, 169, 255, 0.05),
+      rgba(141, 169, 255, 0.65)
+    );
+
+  box-shadow:
+    0 0 8px rgba(141, 169, 255, 0.16);
+}
+
+.experience-small-label-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(141, 169, 255, 0.65),
+      rgba(141, 169, 255, 0.05)
+    );
+}
+
+.experience-summary p {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.85;
+
+  letter-spacing: -0.005em;
+}
+
+
+/* =========================================================
+   PROJECT NAME
+   MATCH COMPANY COLOR
+========================================================= */
+
+.experience-project-name {
+  color: #8da9ff;
+
+  background: none;
+
+  -webkit-text-fill-color: #8da9ff;
+
+  font-weight: 700;
+
+  letter-spacing: -0.015em;
+
+  filter:
+    drop-shadow(
+      0 0 10px
+      rgba(141, 169, 255, 0.16)
+    );
+}
+
+.experience-summary strong:not(.experience-project-name) {
+  color: rgba(255, 255, 255, 0.82);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+.experience-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 22px;
+
+  color: rgba(174, 188, 255, 0.72);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.experience-link svg {
+  transition:
+    transform 0.25s ease;
+}
+
+.experience-link:hover {
+  color: #aebcff;
+
+  transform: translateX(2px);
+}
+
+.experience-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   ENGINEERING DETAILS
+========================================================= */
+
+.experience-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   DETAIL CARD
+========================================================= */
+
+.experience-detail {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 18px 1fr;
+
+  gap: 14px;
+
+  min-height: 95px;
+
+  padding: 18px 20px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.055);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.018),
+      rgba(255, 255, 255, 0.006)
+    );
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.experience-detail:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(119, 140, 255, 0.045),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  border-color: rgba(137, 157, 255, 0.12);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PREMIUM BULLET
+========================================================= */
+
+.experience-detail-bullet {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 18px;
+
+  padding-top: 5px;
+}
+
+.experience-detail-bullet::before {
+  content: '';
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border: 1px solid rgba(141, 169, 255, 0.30);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(141, 169, 255, 0.18),
+      rgba(141, 169, 255, 0.025) 65%,
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 12px rgba(141, 169, 255, 0.08);
+}
+
+.experience-detail-bullet i {
+  position: relative;
+
+  z-index: 1;
+
+  width: 4px;
+  height: 4px;
+
+  margin-top: 4px;
+
+  border-radius: 50%;
+
+  background: #a9b8ff;
+
+  box-shadow:
+    0 0 8px rgba(141, 169, 255, 0.70);
+}
+
+.experience-detail:hover .experience-detail-bullet::before {
+  border-color: rgba(141, 169, 255, 0.55);
+
+  box-shadow:
+    0 0 15px rgba(141, 169, 255, 0.16);
+}
+
+.experience-detail:hover .experience-detail-bullet i {
+  background: #d3dcff;
+
+  box-shadow:
+    0 0 11px rgba(174, 189, 255, 0.90);
+}
+
+.experience-detail p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TECHNOLOGY STACK
+========================================================= */
+
+.experience-stack {
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  padding: 26px 0 4px;
+}
+
+.experience-tech {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 128px;
+
+  min-height: 52px;
+
+  padding: 0 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.014)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-tech:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 16px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   TECHNOLOGY ICON
+========================================================= */
+
+.experience-tech-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-tech-name {
+  color: rgba(255, 255, 255, 0.60);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.09em;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease;
+}
+
+.experience-tech:hover .experience-tech-name {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   TECHNOLOGY — INDIVIDUAL COLORS
+========================================================= */
+
+.tech-react {
+  border-color: rgba(97, 218, 251, 0.15);
+}
+
+.tech-react .experience-tech-icon {
+  color: #61dafb;
+
+  background: rgba(97, 218, 251, 0.07);
+
+  box-shadow:
+    0 0 18px rgba(97, 218, 251, 0.08);
+}
+
+.tech-react:hover {
+  border-color: rgba(97, 218, 251, 0.30);
+}
+
+.tech-javascript {
+  border-color: rgba(247, 223, 30, 0.13);
+}
+
+.tech-javascript .experience-tech-icon {
+  color: #f7df1e;
+
+  background: rgba(247, 223, 30, 0.065);
+
+  box-shadow:
+    0 0 18px rgba(247, 223, 30, 0.07);
+}
+
+.tech-javascript:hover {
+  border-color: rgba(247, 223, 30, 0.27);
+}
+
+.tech-node {
+  border-color: rgba(104, 193, 85, 0.14);
+}
+
+.tech-node .experience-tech-icon {
+  color: #68c755;
+
+  background: rgba(104, 193, 85, 0.065);
+
+  box-shadow:
+    0 0 18px rgba(104, 193, 85, 0.07);
+}
+
+.tech-node:hover {
+  border-color: rgba(104, 193, 85, 0.28);
+}
+
+.tech-express {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.tech-express .experience-tech-icon {
+  color: rgba(255, 255, 255, 0.84);
+
+  background: rgba(255, 255, 255, 0.045);
+
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.035);
+}
+
+.tech-express:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.tech-mongodb {
+  border-color: rgba(71, 162, 72, 0.15);
+}
+
+.tech-mongodb .experience-tech-icon {
+  color: #55a94f;
+
+  background: rgba(71, 162, 72, 0.07);
+
+  box-shadow:
+    0 0 18px rgba(71, 162, 72, 0.07);
+}
+
+.tech-mongodb:hover {
+  border-color: rgba(71, 162, 72, 0.30);
+}
+
+.tech-react-native {
+  border-color: rgba(97, 218, 251, 0.13);
+}
+
+.tech-react-native .experience-tech-icon {
+  color: #61dafb;
+
+  background: rgba(97, 218, 251, 0.065);
+
+  box-shadow:
+    0 0 18px rgba(97, 218, 251, 0.07);
+}
+
+.tech-react-native:hover {
+  border-color: rgba(97, 218, 251, 0.28);
+}
+
+.tech-expo {
+  border-color: rgba(255, 255, 255, 0.11);
+}
+
+.tech-expo .experience-tech-icon {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.035);
+}
+
+.tech-expo:hover {
+  border-color: rgba(255, 255, 255, 0.21);
+}
+
+.tech-rest {
+  border-color: rgba(148, 104, 255, 0.15);
+}
+
+.tech-rest .experience-tech-icon {
+  color: #aa8cff;
+
+  background: rgba(148, 104, 255, 0.07);
+
+  box-shadow:
+    0 0 18px rgba(148, 104, 255, 0.08);
+}
+
+.tech-rest:hover {
+  border-color: rgba(148, 104, 255, 0.30);
+}
+
+
+/* =========================================================
+   EXPERIENCE → PROJECTS
+========================================================= */
+
+.experience-scroll {
+  align-self: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 34px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.experience-next-scroll {
+  margin-bottom: 0;
+}
+
+.experience-scroll svg {
+  color: rgba(141, 169, 255, 0.64);
+
+  animation:
+    experienceScrollArrow 2s ease-in-out infinite;
+}
+
+.experience-scroll:hover {
+  color: rgba(255, 255, 255, 0.72);
+
+  transform: translateY(2px);
+}
+
+@keyframes experienceScrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  #experience {
+    scroll-margin-top: 112px;
+  }
+
+  .experience-section {
+    padding: 96px 0 32px;
+  }
+
+  .experience-container {
+    min-height: auto;
+  }
+
+  .experience-heading h2 {
+    font-size: clamp(38px, 7vw, 56px);
+  }
+
+  /*
+    Keep the exact 1536 × 572 ratio.
+    No fixed height.
+  */
+  .experience-visual-frame {
+    border-radius: 23px;
+  }
+
+  .experience-item-top {
+    gap: 28px;
+  }
+
+  .experience-body {
+    grid-template-columns:
+      1fr;
+  }
+
+  .experience-summary {
+    padding: 28px 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  }
+
+  .experience-summary p {
+    max-width: 760px;
+  }
+
+  .experience-details {
+    border-left: none;
+  }
+
+  .experience-tech {
+    min-width: 120px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  #experience {
+    scroll-margin-top: 96px;
+  }
+
+  .experience-section {
+    min-height: auto;
+
+    padding: clamp(64px, 10svh, 84px) 0 40px;
+  }
+
+  .experience-top-label {
+    gap: 13px;
+
+    margin-bottom: 28px;
+  }
+
+  .experience-label {
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+  }
+
+  .experience-heading {
+    max-width: 100%;
+  }
+
+  .experience-heading h2 {
+    font-size: clamp(34px, 11vw, 46px);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+  }
+
+  .experience-header {
+    margin-bottom: 26px;
+  }
+
+  .experience-visual {
+    margin-bottom: 30px;
+  }
+
+  /*
+    Exact source-image ratio:
+    1536 × 572
+  */
+  .experience-visual-frame {
+    border-radius: 18px;
+  }
+
+  .experience-visual-frame img {
+    object-position: center center;
+  }
+
+  .experience-visual-index,
+  .experience-visual-year {
+    bottom: 12px;
+
+    min-height: 23px;
+
+    padding: 7px 9px;
+
+    border-radius: 6px;
+
+    font-size: 7px;
+  }
+
+  .experience-visual-index {
+    left: 12px;
+  }
+
+  .experience-visual-year {
+    right: 12px;
+  }
+
+  .experience-item-top {
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 25px 0 24px;
+  }
+
+  .experience-role h3 {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+  }
+
+  .experience-company {
+    font-size: 11px;
+
+    letter-spacing: 0.065em;
+  }
+
+  .experience-department {
+    font-size: 12px;
+  }
+
+  .experience-meta {
+    align-items: flex-start;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 10px 16px;
+  }
+
+  .experience-status {
+    font-size: 8px;
+  }
+
+  .experience-date {
+    font-size: 8px;
+  }
+
+  .experience-summary {
+    padding: 25px 0;
+  }
+
+  .experience-small-label {
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+  }
+
+  .experience-small-label-line {
+    width: 18px;
+  }
+
+  .experience-summary p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .experience-link {
+    margin-top: 19px;
+
+    font-size: 8px;
+  }
+
+  .experience-details {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    border-top: none;
+  }
+
+  .experience-detail {
+    grid-template-columns: 18px 1fr;
+
+    gap: 12px;
+
+    min-height: auto;
+
+    padding: 18px;
+  }
+
+  .experience-detail-bullet {
+    width: 18px;
+
+    padding-top: 4px;
+  }
+
+  .experience-detail p {
+    font-size: 11px;
+
+    line-height: 1.72;
+  }
+
+  .experience-stack {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    padding-top: 22px;
+  }
+
+  .experience-tech {
+    min-width: 0;
+
+    min-height: 49px;
+
+    padding: 0 10px;
+
+    gap: 8px;
+
+    border-radius: 11px;
+  }
+
+  .experience-tech-icon {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 7px;
+  }
+
+  .experience-tech-name {
+    font-size: 7.5px;
+
+    letter-spacing: 0.055em;
+  }
+
+  .experience-scroll {
+    margin-top: 30px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  #experience {
+    scroll-margin-top: 96px;
+  }
+
+  .experience-heading h2 {
+    font-size: 32px;
+  }
+
+  /*
+    Keep the source image ratio:
+    1536 × 572
+  */
+
+  .experience-role h3 {
+    font-size: 22px;
+  }
+
+  .experience-company {
+    font-size: 10px;
+  }
+
+  .experience-stack {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-tech {
+    min-height: 46px;
+
+    padding-inline: 8px;
+  }
+
+  .experience-tech-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .experience-tech-name {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .experience-visual-shine,
+  .experience-scroll svg {
+    animation: none;
+
+    transition: none;
+  }
+
+  .experience-visual-frame img,
+  .experience-detail,
+  .experience-tech,
+  .experience-link,
+  .experience-scroll {
+    transition: none;
+  }
+}
