@@ -720,7 +720,7 @@
 @media (max-width: 850px) {
 
   .hero-section {
-    min-height: auto;
+    min-height: 100svh;
 
     padding:
       clamp(64px, 10svh, 90px)
@@ -981,13 +981,6 @@
 
   .hero-meta {
     font-size: 9px;
-  }
-}
-
-
-@media (pointer: coarse) {
-  .hero-section {
-    min-height: auto;
   }
 }
 

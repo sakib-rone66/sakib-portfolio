@@ -13,10 +13,6 @@ import Contact from './sections/Contact.jsx'
 
 function App() {
   useEffect(() => {
-    if (window.matchMedia('(max-width: 850px), (pointer: coarse)').matches) {
-      return
-    }
-
     let cancelled = false
     let alignmentTimer
 

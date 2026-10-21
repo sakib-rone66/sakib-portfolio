@@ -1054,17 +1054,6 @@
 }
 
 
-@media (pointer: coarse) {
-  .about-part {
-    min-height: auto;
-  }
-
-  .about-part-container {
-    min-height: auto;
-  }
-}
-
-
 /* =========================================
    REDUCED MOTION
 ========================================= */
