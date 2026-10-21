@@ -882,13 +882,27 @@
 
   .hero-visual {
     min-height:
-      clamp(220px, 31svh, 260px);
+      clamp(320px, 44svh, 380px);
   }
 
   .hero-code-card {
-    width: 100%;
+    width: 84%;
 
     border-radius: 15px;
+  }
+
+  .hero-floating-card {
+    position: absolute;
+  }
+
+  .hero-floating-card-one {
+    top: 0;
+    right: -4px;
+  }
+
+  .hero-floating-card-two {
+    left: -4px;
+    bottom: 0;
   }
 
   .hero-code-body {
@@ -920,18 +934,12 @@
   }
 
   .hero-floating-card-one {
-    top: 25px;
-    right: -4px;
-
     width: 150px;
 
     padding: 12px;
   }
 
   .hero-floating-card-two {
-    left: -4px;
-    bottom: 25px;
-
     padding: 11px 12px;
   }
 
