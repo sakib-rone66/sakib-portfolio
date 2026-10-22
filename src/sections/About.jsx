@@ -6,19 +6,18 @@ const aboutPanelVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.04,
+      staggerChildren: 0.045,
     },
   },
 }
 
 const aboutRevealVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 4 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.48,
+      duration: 0.42,
       ease: [0.22, 1, 0.36, 1],
     },
   },

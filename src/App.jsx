@@ -61,7 +61,7 @@ function App() {
 
     const onHashChange = () => {
       const hash = window.location.hash
-      if (hash) {
+      if (hash && hash !== '#about') {
         const immediateAlignmentHashes = new Set(['#projects', '#contact'])
         const delay = immediateAlignmentHashes.has(hash) ? 0 : 1200
         alignAfterFontsLoad(hash, delay)
@@ -69,7 +69,7 @@ function App() {
     }
     const onLoad = () => {
       const hash = window.location.hash
-      if (!hash) return
+      if (!hash || hash === '#about') return
 
       const animatedLabels = new Set([
         '#experience',
