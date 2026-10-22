@@ -721,11 +721,14 @@
 
   .hero-section {
     min-height: 100svh;
+    align-items: safe center;
 
     padding:
       clamp(64px, 10svh, 90px)
       0
       clamp(24px, 4svh, 40px);
+
+    padding-top: 112px;
   }
 
   .hero-container {
@@ -822,6 +825,8 @@
       clamp(64px, 10svh, 84px)
       0
       clamp(24px, 4svh, 36px);
+
+    padding-top: 96px;
   }
 
   .hero-container {
@@ -953,6 +958,12 @@
 
   .floating-card-icon {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 760px) {
+  .app:has(#about:target) .hero-scroll {
+    visibility: hidden;
   }
 }
 

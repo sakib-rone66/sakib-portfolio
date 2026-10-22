@@ -131,54 +131,7 @@ function About() {
 
           </div>
 
-
-          {/* PART 1 → PROFILE */}
-          <motion.a
-            href="#about-details"
-            className="about-scroll about-more-scroll"
-            variants={aboutRevealVariants}
-          >
-            <span>MORE ABOUT ME</span>
-            <span className="projects-scroll-arrow">
-              <ArrowDown size={17} aria-hidden="true" />
-            </span>
-          </motion.a>
-
-        </div>
-      </motion.div>
-
-
-      {/* =========================================
-          PROFILE — PART 2
-      ========================================= */}
-      <motion.div
-        className="about-part about-part-two"
-        variants={aboutPanelVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.12 }}
-      >
-        <div className="container about-part-container">
-
-          {/* PROFILE LABEL */}
-          <div id="about-details" className="section-anchor">
-            <motion.div
-              className="about-top"
-              variants={aboutRevealVariants}
-            >
-              <div className="about-line about-line-left" />
-
-              <div className="about-label">
-                PROFILE
-              </div>
-
-              <div className="about-line about-line-right" />
-            </motion.div>
-          </div>
-
-
-          {/* PROFILE CONTENT */}
-          <div className="about-part-two-content">
+          <div className="about-profile-content">
 
             <motion.div
               className="about-details"
@@ -210,45 +163,19 @@ function About() {
             </motion.div>
 
 
-            {/* =====================================
-                PERSONAL STATEMENT
-            ===================================== */}
-            <motion.div
-              className="about-statement"
+            <motion.a
+              href="#experience"
+              className="about-experience-scroll"
               variants={aboutRevealVariants}
             >
+              <span>SCROLL TO EXPERIENCE</span>
 
-              <p>
-                Building useful software is not only about writing code.
-                It's about understanding the problem, designing the
-                right solution and creating something people can
-                actually rely on.
-              </p>
-
-              <span className="about-statement-author">
-                <span className="about-author-mark" />
-                <span className="about-author-name">
-                  Sakib Al-Hasan
-                </span>
+              <span className="about-experience-scroll-arrow">
+                <ArrowDown size={17} aria-hidden="true" />
               </span>
-
-            </motion.div>
+            </motion.a>
 
           </div>
-
-
-          {/* PROFILE → EXPERIENCE */}
-          <motion.a
-            href="#experience"
-            className="about-experience-scroll"
-            variants={aboutRevealVariants}
-          >
-            <span>SCROLL TO EXPERIENCE</span>
-
-            <span className="about-experience-scroll-arrow">
-              <ArrowDown size={17} aria-hidden="true" />
-            </span>
-          </motion.a>
 
         </div>
       </motion.div>

@@ -762,6 +762,10 @@
 }
 
 @media (max-width: 760px) {
+  .contact-footer-shell {
+    min-height: 100dvh;
+  }
+
   .contact-section {
     padding-top: 96px;
   }
@@ -863,5 +867,15 @@
   .contact-social,
   .contact-action {
     transition: none;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) and (min-width: 851px) {
+  .contact-footer-shell {
+    min-height: auto;
+  }
+
+  .contact-section {
+    flex-grow: 0;
   }
 }

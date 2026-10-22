@@ -267,3 +267,13 @@
     transition: none;
   }
 }
+
+@media (max-width: 760px), (pointer: coarse) and (hover: none) {
+  .footer {
+    margin-top: 50px;
+  }
+
+  .footer .container {
+    padding-bottom: 0;
+  }
+}

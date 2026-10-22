@@ -241,6 +241,12 @@ select {
   isolation: isolate;
 }
 
+@media (max-width: 760px), (pointer: coarse) and (hover: none) {
+  .app {
+    overflow: clip;
+  }
+}
+
 
 /* =========================================================
    CONTAINER
