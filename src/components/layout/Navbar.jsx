@@ -18,37 +18,62 @@ function Navbar() {
   const navbarRef = useRef(null)
 
   useEffect(() => {
+    const sections = navLinks
+      .map(({ href }) => document.querySelector(href))
+      .filter(Boolean)
+    let activeSection = ''
+    let isScrolled = false
+    let sectionPositions = []
+
+    const setCurrentSection = (sectionId) => {
+      if (activeSection === sectionId) return
+
+      activeSection = sectionId
+      setActiveSection(sectionId)
+    }
+
+    const updateSectionPositions = () => {
+      sectionPositions = sections.map((section) => ({
+        id: section.id,
+        top: window.scrollY + section.getBoundingClientRect().top,
+      }))
+    }
+
     const updateNavbar = () => {
-      setScrolled(window.scrollY > 40)
+      const nextScrolled = window.scrollY > 40
+      if (isScrolled !== nextScrolled) {
+        isScrolled = nextScrolled
+        setScrolled(nextScrolled)
+      }
 
-      const activationLine = window.innerHeight * 0.35
-      const sections = navLinks
-        .map(({ href }) => document.querySelector(href))
-        .filter(Boolean)
-
-      const currentSection = sections.reduce((current, section) => {
-        return section.getBoundingClientRect().top <= activationLine
-          ? section.id
-          : current
+      const activationLine = window.scrollY + window.innerHeight * 0.35
+      const currentSection = sectionPositions.reduce((current, section) => {
+        return section.top <= activationLine ? section.id : current
       }, '')
+      setCurrentSection(currentSection)
 
       if (
         window.scrollY + window.innerHeight >=
         document.documentElement.scrollHeight - 2
       ) {
-        setActiveSection(navLinks[navLinks.length - 1].href.slice(1))
-      } else {
-        setActiveSection(currentSection)
+        setCurrentSection(navLinks[navLinks.length - 1].href.slice(1))
       }
     }
 
+    const updateLayout = () => {
+      updateSectionPositions()
+      updateNavbar()
+    }
+
+    updateSectionPositions()
     updateNavbar()
     window.addEventListener('scroll', updateNavbar, { passive: true })
-    window.addEventListener('resize', updateNavbar)
+    window.addEventListener('resize', updateLayout)
+    document.fonts.ready.then(updateLayout)
 
     return () => {
       window.removeEventListener('scroll', updateNavbar)
-      window.removeEventListener('resize', updateNavbar)
+      window.removeEventListener('resize', updateLayout)
     }
   }, [])
 
