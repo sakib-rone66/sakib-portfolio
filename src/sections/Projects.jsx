@@ -131,6 +131,8 @@ function Projects() {
                     <img
                       src={`${import.meta.env.BASE_URL}images/igloo-AMS.jpg`}
                       alt="IGLOO Asset Management System"
+                      loading="lazy"
+                      decoding="async"
                     />
 
                     <div className="project-window-image-overlay" />

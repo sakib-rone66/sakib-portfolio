@@ -332,8 +332,6 @@
       transparent 72%
     );
 
-  filter: blur(8px);
-
   pointer-events: none;
 }
 
@@ -393,9 +391,6 @@
   box-shadow:
     0 30px 85px rgba(0, 0, 0, 0.42),
     inset 0 1px 0 rgba(255, 255, 255, 0.055);
-
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
 
   overflow: hidden;
 }
@@ -532,8 +527,6 @@
     0 18px 45px rgba(0, 0, 0, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.035);
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
 }
 
 .hero-floating-card-one {

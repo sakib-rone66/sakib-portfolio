@@ -135,6 +135,8 @@ function Experience() {
               <img
                 src={`${import.meta.env.BASE_URL}images/experience-igloo.jpg`}
                 alt="Igloo internship experience"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="experience-visual-overlay" />

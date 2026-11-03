@@ -24,6 +24,7 @@ function Navbar() {
     let activeSection = ''
     let isScrolled = false
     let sectionPositions = []
+    let documentHeight = document.documentElement.scrollHeight
 
     const setCurrentSection = (sectionId) => {
       if (activeSection === sectionId) return
@@ -37,6 +38,7 @@ function Navbar() {
         id: section.id,
         top: window.scrollY + section.getBoundingClientRect().top,
       }))
+      documentHeight = document.documentElement.scrollHeight
     }
 
     const updateNavbar = () => {
@@ -54,7 +56,7 @@ function Navbar() {
 
       if (
         window.scrollY + window.innerHeight >=
-        document.documentElement.scrollHeight - 2
+        documentHeight - 2
       ) {
         setCurrentSection(navLinks[navLinks.length - 1].href.slice(1))
       }
@@ -69,11 +71,13 @@ function Navbar() {
     updateNavbar()
     window.addEventListener('scroll', updateNavbar, { passive: true })
     window.addEventListener('resize', updateLayout)
+    window.addEventListener('load', updateLayout, { once: true })
     document.fonts.ready.then(updateLayout)
 
     return () => {
       window.removeEventListener('scroll', updateNavbar)
       window.removeEventListener('resize', updateLayout)
+      window.removeEventListener('load', updateLayout)
     }
   }, [])
 

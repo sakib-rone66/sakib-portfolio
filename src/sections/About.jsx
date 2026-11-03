@@ -71,6 +71,8 @@ function About() {
                 <img
                   src={`${import.meta.env.BASE_URL}images/sakib-portrait-04.jpg`}
                   alt="Md. Sakib Al-Hasan"
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 <div className="about-portrait-overlay" />

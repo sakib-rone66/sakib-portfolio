@@ -152,8 +152,6 @@
     0 30px 85px rgba(0, 0, 0, 0.42),
     inset 0 1px 0 rgba(255, 255, 255, 0.055);
 
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
 }
 
 .about-portrait-glow {
@@ -175,8 +173,6 @@
       rgba(89, 112, 255, 0.20),
       transparent 70%
     );
-
-  filter: blur(45px);
 
   pointer-events: none;
 }

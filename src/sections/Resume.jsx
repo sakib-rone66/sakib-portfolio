@@ -69,6 +69,8 @@ function Resume() {
               <img
                 src={`${import.meta.env.BASE_URL}images/sakib-portrait-01.jpg`}
                 alt="Md. Sakib Al-Hasan"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="resume-portrait-overlay" />
